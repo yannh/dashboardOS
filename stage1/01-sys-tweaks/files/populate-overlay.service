@@ -1,0 +1,8 @@
+[Unit]
+Description=Populate overlay tmpfs
+Requires=mnt.mount
+After=mnt.mount
+DefaultDependencies=false
+
+[Service]
+ExecStart=/bin/mkdir -p /mnt/home /mnt/var/log /mnt/var/cache /mnt/workdir/home /mnt/workdir/var/log /mnt/workdir/var/cache

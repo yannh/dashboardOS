@@ -1,0 +1,9 @@
+#!/bin/bash
+export DISPLAY=:0
+
+xset s off         # don't activate screensaver
+xset -dpms         # disable DPMS (Energy Star) features.
+xset s noblank     # don't blank the video device
+
+/usr/bin/matchbox-window-manager -use_titlebar no -use_cursor no &
+/usr/bin/chromium-browser --kiosk --incognito --mute-audio --noerrdialogs --disable-session-crashed-bubble --start-maximized --start-fullscreen --no-first-run `cat /boot/dashboard.txt`

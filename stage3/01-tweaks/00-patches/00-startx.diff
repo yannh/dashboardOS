@@ -1,0 +1,12 @@
+Index: jessie-stage2/rootfs/home/pi/.profile
+===================================================================
+--- jessie-stage2.orig/rootfs/home/pi/.profile
++++ jessie-stage2/rootfs/home/pi/.profile
+@@ -20,3 +20,7 @@
+ if [ -d "$HOME/bin" ] ; then
+     PATH="$HOME/bin:$PATH"
+ fi
++
++if [ -z "$DISPLAY"] && [ `tty` == "/dev/tty1" ]; then
++    startx -- -nocursor -bs -nolisten tcp :0
++fi
