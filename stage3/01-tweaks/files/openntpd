@@ -1,0 +1,5 @@
+# /etc/default/openntpd
+
+# Force set the system time on boot since the
+# Raspberry pi has no hardware clock
+DAEMON_OPTS="-f /etc/openntpd/ntpd.conf -s"

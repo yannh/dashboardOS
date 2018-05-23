@@ -6,4 +6,4 @@ tmpfs /mnt tmpfs defaults,size=256M 0 0
 tmpfs /tmp tmpfs defaults,size=8M,mode=1777 0 0
 
 overlay /home overlay lowerdir=/home,upperdir=/mnt/home,workdir=/mnt/workdir/home,x-systemd.requires=populate-overlay.service 0 0
-overlay /var/log overlay lowerdir=/var/log,upperdir=/mnt/var/log,workdir=/mnt/workdir/var/log,x-systemd.requires=populate-overlay.service 0 0
+overlay /var overlay lowerdir=/var,upperdir=/mnt/var,workdir=/mnt/workdir/var,x-systemd.requires=populate-overlay.service 0 0

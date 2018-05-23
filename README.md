@@ -8,6 +8,10 @@ It is designed to be:
  * **Secure** It is built from scratch and ships with only the bare minimum - no SSH, VNC, or even user account to log in with.
  * **Easy-to-use** Just configure the address of your dashboard in the "dashboard.txt" file in the boot partition, and you're good to go.
 
+## Download
+
+You can download the latest version [here](https://github.com/yannh/dashboardOS/releases). Download the latest zip file, extract it, and burn it to a microSD card using dd or bmaptool.
+
 ## How to build
 
 Being a fork of Raspberry Pi's [Pi-Gen](https://github.com/RPi-Distro/pi-gen), it uses the same build system. Stages 0-2 have been slightly adapted, and:
