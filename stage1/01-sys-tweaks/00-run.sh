@@ -15,5 +15,5 @@ if ! id -u pi >/dev/null 2>&1; then
 fi
 echo "pi:raspberry" | chpasswd
 echo "root:root" | chpasswd
-ln -s /etc/systemd/system/populate-overlay.service /etc/systemd/system/local-fs.target.wants/
+ln -sf /etc/systemd/system/populate-overlay.service /etc/systemd/system/local-fs.target.wants/
 EOF

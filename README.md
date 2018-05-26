@@ -12,6 +12,10 @@ It is designed to be:
 
 You can download the latest version [here](https://github.com/yannh/dashboardOS/releases). Download the latest zip file, extract it, and burn it to a microSD card using dd or bmaptool.
 
+## Configure WIFI
+
+Open the file "wpa\_supplicant.conf" in the boot partition, uncomment all lines and fill in your SSID and password.
+
 ## How to build
 
 Being a fork of Raspberry Pi's [Pi-Gen](https://github.com/RPi-Distro/pi-gen), it uses the same build system. Stages 0-2 have been slightly adapted, and:

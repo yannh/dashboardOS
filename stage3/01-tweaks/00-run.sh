@@ -20,3 +20,10 @@ install -m 0644 files/openntpd "${ROOTFS_DIR}/etc/default/openntpd"
 
 # Disable timesyncd, since we ll use openntpd
 systemctl disable systemd-timesyncd
+
+# Link wpa-supplicant conf to /boot
+on_chroot << EOF
+rm -f /etc/wpa_supplicant/wpa_supplicant.conf
+ln -sf /boot/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+EOF
+install -m 0644 files/wpa_supplicant.conf "${ROOTFS_DIR}/boot/wpa_supplicant.conf"
