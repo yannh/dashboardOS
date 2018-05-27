@@ -19,7 +19,9 @@ install -m 0644 files/dashboard.txt "${ROOTFS_DIR}/boot/dashboard.txt"
 install -m 0644 files/openntpd "${ROOTFS_DIR}/etc/default/openntpd"
 
 # Disable timesyncd, since we ll use openntpd
+on_chroot << EOF
 systemctl disable systemd-timesyncd
+EOF
 
 # Link wpa-supplicant conf to /boot
 on_chroot << EOF
